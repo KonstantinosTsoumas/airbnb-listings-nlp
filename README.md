@@ -67,7 +67,7 @@ https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listin
   
   An interesting plot is the following, price against room type. The figure, as the xaes and the legend display, illustrate the distribution of the prices acrosss the types of available rooms in the dataset. It can be inferred from the graph that the most expensive type of accommodation is a private room with an average price of almost $100 per night. The x axe is limited between (0, 500) for visualisation purposes.
   
-<img src="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/price_room_type.jpeg" width="422" height="358">
+<img src="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/price_room_type.jpeg" width="600" height="400">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
