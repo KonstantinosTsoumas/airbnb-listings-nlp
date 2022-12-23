@@ -3,7 +3,9 @@
   <a href="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp">
   </a>
 
-  <h3 align="center">This project tries to answer questions such as which is the most appropriate content for houses that are more (less) premium and does the type of promotion matter. Latent Dirichlet Allocation, Sentiment Analysis (sentence, word based) and Tobit regression were used.
+  <h3 align="Center">An Empirical Test of Aristotle's Persuasion with Airbnb Listings<h3>
+    
+  <h3 align="Left">This project tries to answer questions such as which is the most appropriate content for houses that are more (less) premium and does the type of promotion matter. Latent Dirichlet Allocation, Sentiment Analysis (sentence, word based) and Tobit regression were used.
    If this repo was useful in any way, please don't forget to cite, leave a star, share the fun.<h3>
 
 <!-- TABLE OF CONTENTS -->
@@ -60,8 +62,8 @@ https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listin
 <!--Listings-->
 ## Listings
 
-<img src="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings.png" width="422" height="358">
-<img src="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings_zoomed.png" width="422" height="358">
+<img src="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings.png" width="700" height="500">
+<img src="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings_zoomed.png" width="700" height="500">
 
   The figures above demonostrate the spread of the Airbnb listings throughout the city of Amsterdam. The second figure zooms into the center of Amsterdam to provide more clear insights about the given listings. Both of these figures are presented as spatial data (after transforming latitude and longitude) and presented to the common standard World Geodetic System (WGS84). Unsuprisingly, it is obvious that many listings are gathered around the center area of Amsterdam, while a noticeable number of listings can be found on the West side of Amsterdam in comparison to the East side where not many listings are available. 
   
