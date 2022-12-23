@@ -60,15 +60,14 @@ https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listin
 <!--Listings-->
 ## Listings
 
-https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings.png
-
-https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings_zoomed.png
+<img src="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings.png" width="422" height="358">
+<img src="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings_zoomed.png" width="422" height="358">
 
   The figures above demonostrate the spread of the Airbnb listings throughout the city of Amsterdam. The second figure zooms into the center of Amsterdam to provide more clear insights about the given listings. Both of these figures are presented as spatial data (after transforming latitude and longitude) and presented to the common standard World Geodetic System (WGS84). Unsuprisingly, it is obvious that many listings are gathered around the center area of Amsterdam, while a noticeable number of listings can be found on the West side of Amsterdam in comparison to the East side where not many listings are available. 
   
   An interesting plot is the following, price against room type. The figure, as the xaes and the legend display, illustrate the distribution of the prices acrosss the types of available rooms in the dataset. It can be inferred from the graph that the most expensive type of accommodation is a private room with an average price of almost $100 per night. The x axe is limited between (0, 500) for visualisation purposes.
   
-https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/price_room_type.jpeg
+<img src="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/price_room_type.jpeg" width="422" height="358">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
