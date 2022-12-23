@@ -1,4 +1,3 @@
-<!LOGO>
 <br />
 <div align="left">
   <a href="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp">
@@ -105,12 +104,12 @@ git clone https://github.com/KonstantinosTsoumas/airbnb-listings-nlp
 ```
 - Contribute by making changes [PR](https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/pulls).
 
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
 
 ## Contact
 
-Konstantinos Tsoumas - [![LinkedIn](https://www.linkedin.com/in/konstantinostsoumas/)
+Konstantinos Tsoumas - [[LinkedIn](https://www.linkedin.com/in/konstantinostsoumas/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
