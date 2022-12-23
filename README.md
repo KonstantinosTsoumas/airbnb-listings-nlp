@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 <br />
 <div align="left">
   <a href="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp">
@@ -32,7 +33,7 @@
     </li>
     <li><a href="#Useful Links">Useful Links</a></li>
     <li><a href="#Contribute">Contribute</a></li>
-    <li><a href="#contact">contact</a></li>
+    <li><a href="#Contact">contact</a></li>
   </ol>
 </details>
 
@@ -50,9 +51,7 @@
 
   The initial dataset was provided from a publicly available website that contains relevant Airbnb data for specific dates throughout the year in various continents, countries. To extract the data, open-source technologies and maps were used in order for the data to be more visual. The final dataset, which was used for analysis, is a merged dataset of detailed listings and reviews providing a unique set of data. 
 
-https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings.png
-    
-https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listings_zoomed.png
+
 ### Evaluation Metrics
   In order to be able to measure the performance across listings (hedonic and utilitarian), the occupancy rate was used. This measurement however, is not publicly available and had to be calculated manually based on the "San Fransisco Model". In addition, regarding Tobit regression both Pseudo-R squared and Variance Inflation Factor have been taken into account. 
   What's more, the initial dataset appears to have an upper bound to the number of words used in the text which sometimes lead to an unexpected cut of the sentence. 
