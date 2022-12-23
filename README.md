@@ -1,10 +1,10 @@
 <!LOGO>
 <br />
-<div align="center">
+<div align="left">
   <a href="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp">
   </a>
 
-  <h3 align="center">This project tries to answer questions such as which is the most appropriate content for houses that are more (less) premium and does the type of promotion matter. Latent Dirichlet Allocation, Sentiment Analysis (sentence, word based) and Tobit regression were used.
+  <h3 align="left">This project tries to answer questions such as which is the most appropriate content for houses that are more (less) premium and does the type of promotion matter. Latent Dirichlet Allocation, Sentiment Analysis (sentence, word based) and Tobit regression were used.
    If this repo was useful in any way, please don't forget to cite, leave a star, share the fun.<h3>
 
 <!-- TABLE OF CONTENTS -->
@@ -42,7 +42,7 @@
   This was implemented by matching Aristoteles's Rhetoric theory, Logos (Logical Proof), Ethos (Credibility), and Pathos (Emotion) with certain variables, and by manually calibrating the occupancy rate as a performance measurement. From the aforementioned, only the first persuasive mode is matched with utilitarian products, while the remaining were related to hedonic products. 
   Latent Dirichlet Allocation (LDA) is applied to build an understanding of the topics used in the dataset, and then Sentiment Analysis is implemented to capture the valence of hosts when writing and describing themselves and their listings. The final model is estimated using Tobit regression. Persuasion through Logos (Logical proof) has the smallest negative effect on the occupancy rate. Likewise, Pathos (Emotion) also has a negative effect on the occupancy in comparison to Ethos (Credibility), which positively affects the occupancy rate suggesting a positive effect also on estimated bookings. I provide several suggestions for further research based on these results.
   
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 <!--About the project-->
 ### Dataset
@@ -54,7 +54,7 @@
   In order to be able to measure the performance across listings (hedonic and utilitarian), the occupancy rate was used. This measurement however, is not publicly available and had to be calculated manually based on the "San Fransisco Model". In addition, regarding Tobit regression both Pseudo-R squared and Variance Inflation Factor have been taken into account. 
   What's more, the initial dataset appears to have an upper bound to the number of words used in the text which sometimes lead to an unexpected cut of the sentence. 
   
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 <!--Listings-->
 ## Listings
@@ -69,7 +69,7 @@ https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/listin
   
 https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/imgs/price_room_type.jpeg
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 <!--Persuasion Theories-->
 ## Persuasion Theories
@@ -83,7 +83,7 @@ Concerning persuasion through logos, can be accomplished by presenting arguments
 ## Pathos
 According to Aristotle, persuasion through pathos comes when the audience is led by a speech from which people can feel emotion or passion, and this has an impact on the judgment call they are going to make later. In this project, emotional words were captured by using Sentiment Analysis. Specifically, the emotional words found in the "Description" and "Host about" columns were measured to get the valence of hosts. It must be highlited that both negative and positive sentiments are considered emotional. 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 <!--Useful Links-->
 ## Useful Links
@@ -93,7 +93,7 @@ According to Aristotle, persuasion through pathos comes when the audience is led
 3. [A short introduction to Sentiment Analysis](https://towardsdatascience.com/sentiment-analysis-concept-analysis-and-applications-6c94d6f58c17)
 4. [What is Airbnb?](https://www.airbnb.com/help/article/2503)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 <!--Contribute-->
 ## Contribute
@@ -105,7 +105,7 @@ git clone https://github.com/KonstantinosTsoumas/airbnb-listings-nlp
 ```
 - Contribute by making changes [PR](https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/pulls).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
 
