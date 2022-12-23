@@ -34,6 +34,7 @@
     <li><a href="#Useful Links">Useful Links</a></li>
     <li><a href="#Contribute">Contribute</a></li>
     <li><a href="#Contact">contact</a></li>
+    <li><a href="#License">License</a></li>
   </ol>
 </details>
 
@@ -113,5 +114,13 @@ git clone https://github.com/KonstantinosTsoumas/airbnb-listings-nlp
 ## Contact
 
 Konstantinos Tsoumas - [LinkedIn](https://www.linkedin.com/in/konstantinostsoumas/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!--License-->
+
+## License
+
+MIT License - [License](https://github.com/KonstantinosTsoumas/airbnb-listings-nlp/blob/main/LICENSE.md/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
