@@ -2,7 +2,6 @@
 <br />
 <div align="center">
   <a href="https://github.com/KonstantinosTsoumas/airbnb-listings-nlp">
-    <img src="images/logo.png" alt="Logo" width="60" height="80">
   </a>
 
   <h3 align="center">This project tries to answer questions such as which is the most appropriate content for houses that are more (less) premium and does the type of promotion matter. Latent Dirichlet Allocation, Sentiment Analysis (sentence, word based) and Tobit regression were used.
