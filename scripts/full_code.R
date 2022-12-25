@@ -173,7 +173,6 @@ data$host_is_superhost <- ifelse(data$host_is_superhost == 't', 1, 0) #masubset_
 data$host_identity_verified <- ifelse(data$host_identity_verified == 't', 1, 0) #masubset_rege it binary
 data$host_response_rate <- (data$host_response_rate)/100
 
-
 #Construct Pathos persuasion theory using Sentiment Analysis
 sent_subset <- get_nrc_sentiment(data$description)
 sent_subset <- as.data.frame(sent_subset)
@@ -192,23 +191,26 @@ data$host_about_pol <- as.factor(data$host_about_pol)
 
 #WORD BASED SENTIMENT ANALYSIS
 #Pre processing text
-data$description <- tolower(data$description)                                         # Transform all text to lower case
-data$description <- gsub("[^0-9a-z,.:;' ]", "", data$description, ignore.case = TRUE) # subset_regeep a-z, 0-9, ",", ".", ":", ";" and "'", remove any other characters
-data$description <- gsub(":", ",", data$description, ignore.case = TRUE)              # Replace : by ,
-data$description <- gsub(";", ",", data$description, ignore.case = TRUE)              # Replace ; by ,
-data$description <- gsub("\\.", ",", data$description, ignore.case = TRUE)            # Replace . by ,
+# Define the columns to preprocess
+text_columns = c("description", "host_about", "comments")
 
-data$host_about <- tolower(data$host_about)                                           # Transform all text to lower case
-data$host_about <- gsub("[^0-9a-z,.:;' ]", "", data$host_about, ignore.case = TRUE)   # subset_regeep a-z, 0-9, ",", ".", ":", ";" and "'", remove any other characters
-data$host_about <- gsub(":", ",", data$host_about, ignore.case = TRUE)                # Replace : by ,
-data$host_about <- gsub(";", ",", data$host_about, ignore.case = TRUE)                # Replace ; by ,
-data$host_about <- gsub("\\.", ",", data$host_about, ignore.case = TRUE)              # Replace . by ,
+# Iterate over the text columns
+for(column in text_columns){
+  
+  # Transform text to lowercase
+  data[, column] <- tolower(data[, column])
+  
+  # Remove certain characters
+  data[, column] <- gsub("[^0-9a-z,.:;' ]", "", data[, column], ignore.case = TRUE)
+  
+  # Replace : and ; with ,
+  data[, column] <- gsub(":", ",", data[, column], ignore.case = TRUE)
+  data[, column] <- gsub(";", ",", data[, column], ignore.case = TRUE)
+  
+  # Replace . with ,
+  data[, column] <- gsub("\\.", ",", data[, column], ignore.case = TRUE)
+}
 
-data$comments <- tolower(data$comments)                                           # Transform all text to lower case
-data$comments <- gsub("[^0-9a-z,.:;' ]", "", data$host_about, ignore.case = TRUE)   # subset_regeep a-z, 0-9, ",", ".", ":", ";" and "'", remove any other characters
-data$comments <- gsub(":", ",", data$host_about, ignore.case = TRUE)                # Replace : by ,
-data$comments <- gsub(";", ",", data$host_about, ignore.case = TRUE)                # Replace ; by ,
-data$comments <- gsub("\\.", ",", data$host_about, ignore.case = TRUE)
 
 #unnesting description column and putting them all togheter in all_words
 all_words <- data[,] %>%
@@ -254,30 +256,27 @@ all_neg_sentences_words <- all_neg_sentences  %>%
   unnest_tosubset_regens(word,sentence) %>%
   anti_join(get_stopwords(language = "en"), by = "word")
 
-##DESCRIPTION
-#Deleting 'br' and numbers for description
-all_pos_sentences_words$word <- gsub('[[:digit:]]+', NA, all_pos_sentences_words$word) #transforming to NA
-all_pos_sentences_words$word <- gsub("br",NA,as.character(all_pos_sentences_words$word)) #transforming to NA
-all_pos_sentences_words <- subset(all_pos_sentences_words, !is.na(all_pos_sentences_words$word))
+#DESCRIPTION
+# Define the columns to process
+text_columns = c("all_pos_sentences_words", "all_neg_sentences_words")
 
-#to negative words, removing stopwords in 2nd language for the description column
-all_neg_sentences_words$word <- gsub('br', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('[[:digit:]]+', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('can', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('also', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('two', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('one', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words <- subset(all_neg_sentences_words, !is.na(all_neg_sentences_words$word))
+# Define the words to remove
+remove_words = c("br", "can", "also", "two", "one", "try", "assubset_reg", "thats", "well", "bnb")
 
-###HOST ABOUT
-all_neg_sentences_words$word <- gsub('try', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('assubset_reg', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('thats', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('one', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('well', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('bnb', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words$word <- gsub('one', NA, all_neg_sentences_words$word) #transforming to NA
-all_neg_sentences_words <- subset(all_neg_sentences_words, !is.na(all_neg_sentences_words$word))
+# Iterate over the text columns
+for(column in text_columns){
+  
+  # Remove digits
+  data[, column] <- gsub('[[:digit:]]+', NA, data[, column])
+  
+  # Iterate over the words to remove
+  for(word in remove_words){
+    data[, column] <- gsub(word, NA, data[, column])
+  }
+  
+  # Remove rows with missing values
+  data <- subset(data, !is.na(data[, column]))
+}
 
 #Ploting words of positive sentences to number of occurences (x-axes)
 all_pos_sentences_words %>%
