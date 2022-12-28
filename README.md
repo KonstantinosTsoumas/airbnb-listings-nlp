@@ -31,10 +31,10 @@
         <li><a href="#Pathos">Pathos</a></li>
       </ul>
     </li>
-    <li><a href="Conclusion">Conclusion</a></li>
+    <li><a href="#Conclusion">Conclusion</a></li>
     <li><a href="#Useful Links">Useful Links</a></li>
     <li><a href="#Contribute">Contribute</a></li>
-    <li><a href="#Contact">contact</a></li>
+    <li><a href="#Contact">Contact</a></li>
     <li><a href="#License">License</a></li>
   </ol>
 </details>
